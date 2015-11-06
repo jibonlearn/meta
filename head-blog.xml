@@ -1,0 +1,40 @@
+<b:if cond='data:blog.isMobile'>
+			<meta content='width=device-width,initial-scale=1.0,minimum-scale=0.5,maximum-scale=2.0' name='viewport'/>
+			<meta content='noindex,nofollow' name='robots'/>
+		</b:if>
+		<b:include data='blog' name='all-head-content'/>
+		<meta content='####################' name='google-site-verification'/>
+		<meta content='####################' name='msvalidate.01'/>
+		<meta content='####################' name='alexaVerifyID'/>
+		<meta content='index, follow, noodp, noydir' name='robots'/>
+		<meta content='id' name='geo.country'/>
+		<meta content='Mas Yadi' name='author'/>
+		<meta content='1 days' name='revisit-after'/>
+		<meta content='Indonesia' name='geo.placename'/>
+		<meta content='blogger' name='generator'/>
+		<meta content='general' name='rating'/>
+		<meta content='index, follow, snipet' name='googlebot'/>
+		<b:if cond='data:blog.pageType == &quot;index&quot;'>
+			<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+			<meta content='website' property='og:type'/>
+			<meta expr:content='data:blog.title' property='og:site_name'/>
+			<meta content='id_id' property='og:locale'/>
+			<meta expr:content='data:blog.pageTitle' property='og:title'/>
+			<meta expr:content='data:blog.metaDescription' property='og:description'/>
+			<meta expr:content='data:blog.postImageThumbnailUrl' property='og:image'/>
+			<title><data:blog.pageTitle/></title>
+			<meta content='KEYWORD+BLOG_ANDA' name='keywords'/>
+		</b:if>
+		<b:if cond='data:blog.pageType != &quot;index&quot;'>
+			<meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+			<meta content='article' property='og:type'/>
+			<meta expr:content='data:blog.title' property='og:site_name'/>
+			<meta content='id_id' property='og:locale'/>
+			<meta expr:content='data:blog.pageName' property='og:title'/>
+			<meta expr:content='data:blog.metaDescription' property='og:description'/>
+			<b:if cond='data:blog.postImageThumbnailUrl'>
+				<meta expr:content='data:blog.postImageThumbnailUrl' property='og:image'/>
+			</b:if>
+			<title><data:blog.pageName/> - <data:blog.title/></title>
+			<meta expr:content='data:blog.pageName' name='keywords'/>
+		</b:if>
